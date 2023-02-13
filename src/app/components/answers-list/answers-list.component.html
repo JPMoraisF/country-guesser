@@ -1,0 +1,9 @@
+<div class="app-guesses">
+    <!-- Previous hints goes here -->
+    <p
+    *ngFor="let answer of wrongAnswersList">
+       {{answer}}
+    </p>
+    <input type="text" placeholder="Your guess here" #answerGiven>
+    <button (click)="onAnswerGiven(answerGiven)">Send</button>
+</div>

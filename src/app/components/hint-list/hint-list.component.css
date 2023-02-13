@@ -1,0 +1,13 @@
+.app-hints {
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    background-color: gray;
+    padding: 15px;
+}
+
+.app-hint {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: white;
+}
