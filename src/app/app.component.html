@@ -1,32 +1,3 @@
 <div class="container">
-    <div 
-        class="app-title"
-        >
-        <h2 class="app-title__header">Country guesser</h2>
-        <p class="app-title__subtitle"></p>
-    </div>
-    <div *ngIf="!newGame">
-        <br >
-        <button class="btn-primary" (click)="onGetGameCountry()">New Game</button>
-        <br />
-        <button class="btn-secondary" >How to Play</button>
-        <button class="btn-secondary" >Edit Hints</button>
-        <button class="btn-secondary" >About</button>
-    </div>
-    <div *ngIf="newGame">
-        <button class="btn-secondary" (click)="onGetGameCountry()">New Country</button>
-        <button class="btn-secondary" (click)="giveUp()">Give up</button>
-    </div>
-    <div 
-        class="game-window"
-        *ngIf="newGame">
-        <app-hint-list
-        [gameCountry]="gameCountry"
-        >
-        </app-hint-list>
-        
-        <app-answers-list>
-        </app-answers-list>
-    </div>
-
+    <router-outlet></router-outlet>
 </div>

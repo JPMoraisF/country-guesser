@@ -23,7 +23,10 @@ export class InMemoryDataService implements InMemoryDbService {
         "Flag": "flag-of-peru",
         "region": "South America",
         "Hints": [
-          "Named after an edible bird"
+          "Named after an edible bird",
+          "Named after an edible bird",
+          "Named after an edible bird",
+          "Named after an edible bird",
         ]
       },
       {
@@ -32,7 +35,10 @@ export class InMemoryDataService implements InMemoryDbService {
         "Flag": "flag-of-bolivia",
         "region": "South America",
         "Hints": [
-          "Landlocked country in south america"
+          "I am a landlocked country, which means my borders don't have direct access to the ocean",
+          "I have over 30 official languages",
+          "Lake Titicaca, which is the highest lake that's deep enough for a bot to sail on is located here",
+          "One of my two capitals is called Sucre",
         ]
       },
       {
@@ -41,6 +47,10 @@ export class InMemoryDataService implements InMemoryDbService {
         "Flag": "flag-of-japan",
         "region": "Asia",
         "Hints": [
+          "Known as the land of the rising sun",
+          "Known as the land of the rising sun",
+          "Known as the land of the rising sun",
+          "Known as the land of the rising sun",
           "Known as the land of the rising sun"
         ]
       },
@@ -51,6 +61,9 @@ export class InMemoryDataService implements InMemoryDbService {
         "region": "North America",
         "Hints": [
           "Northernmost country in north america",
+          "Northernmost country in north america",
+          "Northernmost country in north america",
+          "Northernmost country in north america",
           "Land of Maple Syrup"
         ]
       },
@@ -60,7 +73,11 @@ export class InMemoryDataService implements InMemoryDbService {
         "Flag": "flag-of-mexico",
         "region": "North America",
         "Hints": [
-          "The meteor that killed the dinosaurs hit this country 66 million years ago"
+          "The meteor that killed the dinosaurs hit this country 66 million years ago",
+          "The meteor that killed the dinosaurs hit this country 66 million years ago",
+          "The meteor that killed the dinosaurs hit this country 66 million years ago",
+          "The meteor that killed the dinosaurs hit this country 66 million years ago",
+          "The meteor that killed the dinosaurs hit this country 66 million years ago",
         ]
       }
     ];

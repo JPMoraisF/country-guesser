@@ -1,0 +1,7 @@
+.app-guesses {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 400px;
+}
