@@ -5,8 +5,9 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './hint-list.component.html',
   styleUrls: ['./hint-list.component.css']
 })
-export class HintListComponent  {
-  private hintList:string[] = [];
+export class HintListComponent {
+
+  @Input('hintList') hintList: string[] = [];
 
   public askedHints: string[] = [];
 

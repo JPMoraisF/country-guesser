@@ -2,11 +2,19 @@
     <div class="app-title">
         <h2 class="app-title__header">Country guesser</h2>
         <p class="app-title__subtitle">Can you guess the country with as few hints as possible?</p>
+        <p class="app-title__subtitle">Now updated with horrible styling</p>
     </div>
-    <div class="main-menu">
+    <div *ngIf="!this.toggleHelp" class="app-menu">
         <button class="btn-primary btn-primary-cta" routerLink="/game">New Game</button>
-        <button class="btn-primary">How to Play</button>
-        <button class="btn-primary">Edit Hints</button>
+        <button class="btn-primary" (click)="this.toggleHelp = !this.toggleHelp">How to Play</button>
+        <!-- <button class="btn-primary">Edit Hints</button> -->
         <button class="btn-primary">About</button>
+    </div>
+    <div *ngIf="this.toggleHelp" class="app-help">
+        <p >Each round a random country will be chosen and you have to guess it
+            in as few hints as possible. <br>
+            On the right side you can take your guesses
+        </p>
+        <button class="btn-primary" (click)="this.toggleHelp = !this.toggleHelp">Back to menu</button>
     </div>
 </div>

@@ -1,10 +1,10 @@
 <div class="app-hints">
-    <p>You have {{getHintsRemaining()}} hints remaining</p>
+    <p class="app-hints__title">You have {{getHintsRemaining()}} hints remaining</p>
     <article 
         class="app-hints__item"
         *ngFor="let hint of askedHints"
     >
     {{hint}}
     </article>
-    <button (click)="onNewHintAsked()">Give me a hint</button>
+    <button (click)="onNewHintAsked()" [disabled]="this.getHintsRemaining() == 0">Give me a hint</button>
 </div>

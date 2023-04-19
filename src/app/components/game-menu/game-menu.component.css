@@ -11,9 +11,13 @@
     font-size: x-large;
 }
 
-.main-menu {
+.app-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: end;
+}
+
+.app-help {
+    text-align: center;
 }

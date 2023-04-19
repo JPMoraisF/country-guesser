@@ -5,9 +5,16 @@
     width: 400px;
 }
 
+.app-hints__title {
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 0px;
+}
+
 .app-hints__item {
-    border: 1px solid gray;
+    border: 1px solid lightgray;
     border-radius: 5px;
     padding: 5px;
     background-color: white;
+    margin: 2px 0px
 }
