@@ -1,6 +1,12 @@
-<div  class="container">
+<div class="container">
+        <nav class="navbar">
+            <div>
+                <button class="btn-primary" routerLink="/menu">Back to menu</button>
+            </div>
+        </nav>
     <div class="game-window">
-        <app-hint-list [hintList]="gameCountry.Hints"></app-hint-list>
+        <app-hint-list></app-hint-list>
         <app-answers-list></app-answers-list>
     </div>
+    <p>{{this.answerGiven}}</p>
 </div>

@@ -1,8 +1,8 @@
 .app-hints {
-    border: 1px solid red;
-    border-radius: 5px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
     padding: 15px;
-    width: 400px;
+    margin: 0px 0.25em;
 }
 
 .app-hints__title {
@@ -14,7 +14,7 @@
 .app-hints__item {
     border: 1px solid lightgray;
     border-radius: 5px;
-    padding: 5px;
-    background-color: white;
-    margin: 2px 0px
+    padding: 0.7em;
+    margin: 0.5em 0;
+    font-weight: bold;
 }

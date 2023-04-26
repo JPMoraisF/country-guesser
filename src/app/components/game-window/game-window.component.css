@@ -1,5 +1,19 @@
 .game-window {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.container {
+    margin: 0vh 15vw
+}
+
+.game-window > * {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.navbar {
+    margin-bottom: 2em;
+    margin-top: 1em;
 }

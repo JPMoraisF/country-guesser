@@ -9,10 +9,10 @@ import { Subject } from 'rxjs/internal/Subject';
 export class AnswersListComponent {
   public answerGivenSubject = new Subject<string>();
   public wrongAnswersList: string[] = [];
+  public answerInput: string = "";
   
-  onAnswerGiven(answerGiven: HTMLInputElement){
-    let answer = answerGiven.value;
-    this.answerGivenSubject.next(answer);
-    this.wrongAnswersList.push(answer);
+  onAnswerGiven(){
+    this.answerGivenSubject.next(this.answerInput);
+    this.wrongAnswersList.push();
   }
 }

@@ -6,5 +6,5 @@
     >
     {{hint}}
     </article>
-    <button (click)="onNewHintAsked()" [disabled]="this.getHintsRemaining() == 0">Give me a hint</button>
+    <button class="btn-primary" (click)="onNewHintAsked()" [disabled]="this.getHintsRemaining() === 0">Give me a hint</button>
 </div>

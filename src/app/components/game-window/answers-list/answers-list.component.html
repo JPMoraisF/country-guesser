@@ -4,6 +4,13 @@
     *ngFor="let answer of wrongAnswersList">
        {{answer}}
     </p>
-    <input type="text" placeholder="Your guess here" #answerGiven>
-    <button (click)="onAnswerGiven(answerGiven)">Send</button>
+    <input 
+        class="textarea" 
+        type="text" 
+        placeholder="Your guess here" 
+    >
+    <button 
+        class="btn-primary btn-primary-cta" 
+        (click)="onAnswerGiven()"
+    >Send</button>
 </div>
