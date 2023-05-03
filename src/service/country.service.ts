@@ -13,18 +13,31 @@ export class CountryService {
             "I am the biggest country in South America",
             "i don't speak Spanish",
             "I cant't reach the pacific Ocean",
+            "I cant't reach the pacific Ocean",
+            "I cant't reach the pacific Ocean",
+            "I cant't reach the pacific Ocean",
+            "I cant't reach the pacific Ocean",
+            "I cant't reach the pacific Ocean",
+            "I cant't reach the pacific Ocean",
+            "I cant't reach the pacific Ocean",
+            "I cant't reach the pacific Ocean",
+            "I cant't reach the pacific Ocean",
+            "I cant't reach the pacific Ocean",
+            "I cant't reach the pacific Ocean",
+            "I cant't reach the pacific Ocean",
+            "I cant't reach the pacific Ocean",
             "I'm not a landlocked country"
         ]),
-        new Country(2, "Argentina", "flag-of-argentina", "South America", [
-            "Neighbour of brazil",
-            "My country reach as south as Antarctica",
-            "My name comes from a metal"
-        ]),
-        new Country(3, "Peru", "flag-of-peru", "South America", [
-            "Named after a bird in my native language",
-            "I am very close to the Equator",
-            "I speak spanish"
-        ]),
+        // new Country(2, "Argentina", "flag-of-argentina", "South America", [
+        //     "Neighbour of brazil",
+        //     "My country reach as south as Antarctica",
+        //     "My name comes from a metal"
+        // ]),
+        // new Country(3, "Peru", "flag-of-peru", "South America", [
+        //     "Named after a bird in my native language",
+        //     "I am very close to the Equator",
+        //     "I speak spanish"
+        // ]),
     ]
 
     private gameCountry!: Country;

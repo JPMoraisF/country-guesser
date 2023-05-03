@@ -1,16 +1,11 @@
-<div class="app-guesses">
-    <!-- Previous hints goes here -->
-    <p
-    *ngFor="let answer of wrongAnswersList">
-       {{answer}}
-    </p>
-    <input 
-        class="textarea" 
-        type="text" 
-        placeholder="Your guess here" 
-    >
-    <button 
-        class="btn-primary btn-primary-cta" 
-        (click)="onAnswerGiven()"
-    >Send</button>
+<div class="game-component-border">
+    <p class="app-guess__title">Your hints here</p>
+    <div class="app-guess__list">
+        <!-- Previous hints goes here -->
+        <p class="app-guess__item" *ngFor="let answer of wrongAnswersList">
+            {{answer}}
+        </p>
+    </div>
+    <input class="app-textarea" type="text" placeholder="Your guess here" [(ngModel)]="answerInput">
+    <button class="btn-primary btn-primary-cta submit" (click)="onAnswerGiven()">Send</button>
 </div>

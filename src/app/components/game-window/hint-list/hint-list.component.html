@@ -1,10 +1,10 @@
-<div class="app-hints">
-    <p class="app-hints__title">You have {{getHintsRemaining()}} hints remaining</p>
-    <article 
-        class="app-hints__item"
-        *ngFor="let hint of askedHints"
-    >
-    {{hint}}
-    </article>
-    <button class="btn-primary" (click)="onNewHintAsked()" [disabled]="this.getHintsRemaining() === 0">Give me a hint</button>
+<div class="game-component-border">
+    <div class="app-hints__list">
+        <p class="app-hints__title">You have {{getHintsRemaining()}} hints remaining</p>
+        <article class="app-hints__item" *ngFor="let hint of askedHints; let i = index">
+            {{i + 1}} - {{hint}}
+        </article>
+    </div>
+    <button class="btn-primary" (click)="onNewHintAsked()" [disabled]="this.getHintsRemaining() == 0">Give me a
+        hint</button>
 </div>

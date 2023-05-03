@@ -15,6 +15,16 @@
     color: lightseagreen;
     cursor: pointer;
 }
+.btn-primary:hover {
+    transform: scale(1.2);
+    transition: all 200ms;
+}
+
+.btn-primary:disabled {
+    color: #b2d9d6;
+    cursor: default;
+    border: 0px;
+}
 
 .btn-primary-cta {
     color: white;
@@ -24,10 +34,4 @@
     padding: 0.5em;
     display: flex;
     flex-direction: column;
-}
-
-.textarea {
-    border: 1px solid lightgray;
-    padding: 1em;
-    border-radius: 15px;
 }

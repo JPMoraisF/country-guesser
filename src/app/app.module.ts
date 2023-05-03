@@ -11,6 +11,7 @@ import { InMemoryDataService } from '../service/in-memory-data.service';
 import { GameWindowComponent } from './components/game-window/game-window.component';
 import { AppRoutingModule } from './app-routing.module';
 import { GameMenuComponent } from './components/game-menu/game-menu.component'
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { GameMenuComponent } from './components/game-menu/game-menu.component'
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false }
     ),
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [CountryService],
   bootstrap: [AppComponent]

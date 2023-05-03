@@ -1,14 +1,12 @@
-.app-hints {
-    border: 1px solid lightgray;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 0px 0.25em;
+.app-hints__list {
+    overflow-y: auto;
+    margin: .5em;
+    height: 100%;
 }
 
 .app-hints__title {
     font-weight: bold;
     text-align: center;
-    margin: 5px 0px;
 }
 
 .app-hints__item {

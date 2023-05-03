@@ -4,7 +4,7 @@ import { CountryService } from 'src/service/country.service';
 @Component({
   selector: 'app-hint-list',
   templateUrl: './hint-list.component.html',
-  styleUrls: ['./hint-list.component.css']
+  styleUrls: ['./hint-list.component.css', '../game-window.component.css']
 })
 export class HintListComponent {
 
