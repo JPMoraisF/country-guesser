@@ -14,16 +14,14 @@ export class AnswersListComponent {
   public answer: String = "";
 
   constructor(private countryService: CountryService) {
-    
-    
   }
 
   ngOnInit(){
-     this.answer = this.countryService.getGameCountry()?.Name;
+     this.answer = this.countryService.getGameCountry()?.Name.toUpperCase();
   }
   
   onAnswerGiven(){
-    let submittedAnswer = this.answerInput
+    let submittedAnswer = this.answerInput.toUpperCase();
     if(submittedAnswer !== ""){
       if(submittedAnswer !== this.answer){
         submittedAnswer = submittedAnswer + " X ";
@@ -32,7 +30,7 @@ export class AnswersListComponent {
         this.answerInput = "";
       }
       else {
-        alert('Congratulations')
+        alert('Congratulations, you guessed it right');
       }
     }
   }

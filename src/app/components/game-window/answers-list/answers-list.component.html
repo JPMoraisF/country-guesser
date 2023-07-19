@@ -6,6 +6,8 @@
             {{answer}}
         </p>
     </div>
-    <input class="app-textarea" type="text" placeholder="Your guess here" [(ngModel)]="answerInput">
-    <button class="btn-primary btn-primary-cta submit" (click)="onAnswerGiven()">Send</button>
+    <form class="app-typearea" (ngSubmit)="onAnswerGiven()" #form="ngForm">
+        <input class="app-textarea" type="text" placeholder="Your guess here" [(ngModel)]="answerInput">
+        <p type="submit" class="btn-primary btn-primary-cta submit">Send</p>
+    </form>
 </div>

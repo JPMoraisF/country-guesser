@@ -4,15 +4,23 @@
     height: 100%;
 }
 
+.app-hints__flag {
+    justify-content: center;
+    
+}
+
 .app-hints__title {
     font-weight: bold;
     text-align: center;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 0.5em;
 }
 
 .app-hints__item {
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    padding: 0.7em;
+    border-bottom: 1px solid lightgray;
+    /* border: 1px solid lightgray; */
+    /* border-radius: 5px; */
+    padding: 0.5em;
     margin: 0.5em 0;
-    font-weight: bold;
+    /* font-weight: bold; */
 }

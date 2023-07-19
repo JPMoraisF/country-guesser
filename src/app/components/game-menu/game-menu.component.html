@@ -6,14 +6,13 @@
     <div *ngIf="!this.toggleHelp" class="app-menu">
         <button class="btn-primary btn-primary-cta" routerLink="/game">New Game</button>
         <button class="btn-primary" (click)="this.toggleHelp = !this.toggleHelp">How to Play</button>
-        <!-- <button class="btn-primary">Edit Hints</button> -->
         <button class="btn-primary">About</button>
     </div>
     <div *ngIf="this.toggleHelp" class="app-help">
         <p >Each round a random country will be chosen and you have to guess it
             in as few hints as possible. <br>
-            On the right side you can take your guesses
+            On the right side you can write your guesses. You can ask for tips about the country on the left side
         </p>
         <button class="btn-primary" (click)="this.toggleHelp = !this.toggleHelp">Back to menu</button>
     </div>
-</div>
+</div> 

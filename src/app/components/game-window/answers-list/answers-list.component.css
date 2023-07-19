@@ -21,9 +21,15 @@
 .submit {
     margin: 0.2em
 } */
+.app-typearea {
+    
+    width: 100%;
+}
 
 .app-textarea {
+    box-sizing: border-box;
     border: 1px solid lightgray;
     padding: 1em;
     border-radius: 5px;
+    width: 100%;
 }
