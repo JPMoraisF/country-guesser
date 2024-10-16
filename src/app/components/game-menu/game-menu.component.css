@@ -1,23 +1,75 @@
+/* Container geral */
 .container {
-    padding: 0.5em;
-    display: flex;
-    flex-direction: column;
-}
-
-.app-title {
-    font-family: sans-serif;
-    margin-bottom: 3em;
     text-align: center;
-    font-size: x-large;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Título */
+.app-title__header {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.app-title__subtitle {
+    font-size: 1.2em;
+    color: #7f8c8d;
+}
+
+/* Botões */
+.btn-primary {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.btn-primary-cta {
+    background-color: #e74c3c;
+}
+
+.btn-primary-cta:hover {
+    background-color: #c0392b;
+}
+
+/* Menu */
 .app-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: end;
 }
 
+.app-menu button {
+    width: 80%;
+    max-width: 300px;
+}
+
+/* Ajuda */
 .app-help {
-    text-align: center;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: #34495e;
+    text-align: left;
+}
+
+.app-help p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
 }

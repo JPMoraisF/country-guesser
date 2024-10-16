@@ -1,10 +1,16 @@
 <div class="container">
     <nav class="app-navbar">
-        <button class="btn-primary" routerLink="/menu">Back to menu</button>
+        <button class="btn-primary" routerLink="/menu">Back to Menu</button>
     </nav>
+    
     <div class="game-window">
-        <app-hint-list></app-hint-list>
-        <app-answers-list></app-answers-list>
+        <div class="game-component game-hints">
+            <app-hint-list></app-hint-list>
+        </div>
+        <div class="game-component game-answers">
+            <app-answers-list></app-answers-list>
+        </div>
     </div>
-    <p>{{this.answerGiven}}</p>
+    
+    <p class="answer-text">{{this.answerGiven}}</p>
 </div>

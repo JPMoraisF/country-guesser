@@ -1,22 +1,46 @@
+.container {
+    margin: 0vh 8vw;
+    padding: 20px;
+    background-color: #f7f9fb;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.app-navbar {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1.5em;
+    margin-top: 0.5em;
+}
+
+.app-navbar button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.app-navbar button:hover {
+    background-color: #2980b9;
+}
+
 .game-window {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 20px;
 }
 
-.container {
-    margin: 0vh 8vw
-}
 
 .game-window > * {
     flex-grow: 1;
     flex-basis: 0;
 }
 
-.app-navbar {
-    margin-bottom: 1em;
-    margin-top: 0.5em;
-}
+
 
 .game-component-border {
     border: 1px solid lightgray;
@@ -24,4 +48,15 @@
     padding: 8px;
     margin: 0px 0.25em;
     height: 60vh;
+}
+
+@media (max-width: 768px) {
+    .game-window {
+        flex-direction: column;
+    }
+
+    .game-hints,
+    .game-answers {
+        margin: 0;
+    }
 }

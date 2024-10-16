@@ -12,7 +12,7 @@ export class CountryService {
         new Country(1, "Brazil", "flag-of-brazil", "South America", [
             "I am the biggest country in South America",
             "i don't speak Spanish",
-            "I cant't reach the pacific Ocean",
+            "I cant't reach the pacific OceanI cant't reach the pacific OceanI cant't reach the pacific OceanI cant't reach the pacific OceanI cant't reach the pacific OceanI cant't reach the pacific OceanI cant't reach the pacific OceanI cant't reach the pacific Ocean",
             "I cant't reach the pacific Ocean",
             "I cant't reach the pacific Ocean",
             "I cant't reach the pacific Ocean",
