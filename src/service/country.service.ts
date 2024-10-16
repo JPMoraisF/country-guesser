@@ -9,7 +9,7 @@ export class CountryService {
     base_url: string = 'api/countries';
 
     private countryList: Country[] = [
-        new Country(1, "Brazil", "flag-of-brazil", "South America", [
+        new Country(1, "BRAZIL", "flag-of-brazil", "South America", [
             "I am the biggest country in South America",
             "i don't speak Spanish",
             "I cant't reach the pacific OceanI cant't reach the pacific OceanI cant't reach the pacific OceanI cant't reach the pacific OceanI cant't reach the pacific OceanI cant't reach the pacific OceanI cant't reach the pacific OceanI cant't reach the pacific Ocean",
@@ -26,7 +26,7 @@ export class CountryService {
             "I cant't reach the pacific Ocean",
             "I cant't reach the pacific Ocean",
             "I cant't reach the pacific Ocean",
-            "I'm not a landlocked country"
+            "I'm not a landlocked country",
         ]),
         // new Country(2, "Argentina", "flag-of-argentina", "South America", [
         //     "Neighbour of brazil",

@@ -9,7 +9,8 @@ import { CountryService } from 'src/service/country.service';
 export class HintListComponent {
 
   private hintList: string[] = [];
-
+  public hideFlag: boolean = true;
+  public hintDisable: boolean = false;
   public askedHints: string[] = [];
 
   constructor(private countryService: CountryService) { }
@@ -30,6 +31,7 @@ export class HintListComponent {
   onNewHintAsked() {
     if(this.hintList.length === 0) {
       console.log('you used all the hints')
+      this.hideFlag = false
     }
     else{
       var nextHint = this.hintList[Math.floor(Math.random() * this.hintList.length)];
