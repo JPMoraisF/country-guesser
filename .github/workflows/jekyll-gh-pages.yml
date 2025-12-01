@@ -1,13 +1,16 @@
-name: Deploy project to GitHub pages
+name: Deploy Angular to GitHub Pages
 
 on:
   push:
     branches: ["main"]
 
+permissions:
+  contents: write
+
 jobs:
-  # Build job
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -17,13 +20,13 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies
+      - name: Install
         run: npm ci
 
-      - name: Build Angular
+      - name: Build
         run: npm run build -- --output-path=dist --base-href="/country-guesser/"
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
