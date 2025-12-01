@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { Country } from 'src/models/Country';
 import { CountryService } from 'src/service/country.service';
 
 @Component({
@@ -9,15 +7,58 @@ import { CountryService } from 'src/service/country.service';
   styleUrls: ['./game-window.component.css']
 })
 export class GameWindowComponent {
-  public answerGiven: string[] = [];
-  constructor(private countryService: CountryService) { }
+  public answerInput = '';
+  public askedHints: string[] = [];
+  public hints: string[] = [];
+  public wrongAnswersList: { text: string; isWrong: boolean }[] = [];
+  public answer = '';
 
-  ngOnInit(): void {
+  public showEndModal = false;
+  public endMessage = '';
+
+  constructor(private countryService: CountryService) {}
+
+  async ngOnInit() {
+    await this.countryService.loadCountries();
+    this.startNewGame();
+  }
+
+  startNewGame() {
     this.countryService.setGameCountry();
+    this.answer = this.countryService.getGameCountry().Name;
+
+    this.hints = [...this.countryService.getGameCountryHints()];
+    this.askedHints = [];
+    this.wrongAnswersList = [];
+    
+    this.showEndModal = false;
+    this.answerInput = '';
   }
 
-  ngOnDestroy(): void {
+  triggerEnd(message: string) {
+    this.endMessage = message;
+    this.showEndModal = true;
   }
 
+  onNewHint() {
+    if (this.hints.length === 0) {
+      this.triggerEnd(`You lose! The correct answer was: ${this.answer}`);
+      return;
+    }
+
+    const nextHint = this.hints.shift()!;
+    this.askedHints.push(nextHint);
+  }
   
+  onAnswerGiven() {
+    const submitted = this.answerInput.trim().toLowerCase();
+    if (!submitted) return;
+
+    if (submitted === this.answer.toLowerCase()) {
+     
+      this.triggerEnd('You won! Play again?');
+    }
+    this.wrongAnswersList.push({ text: this.answerInput, isWrong: true });
+    this.answerInput = '';
+  }
 }

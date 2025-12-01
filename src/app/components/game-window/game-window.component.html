@@ -1,16 +1,51 @@
+
 <div class="container">
-    <nav class="app-navbar">
-        <button class="btn-primary" routerLink="/menu">Back to Menu</button>
-    </nav>
-    
-    <div class="game-window">
-        <div class="game-component game-hints">
-            <app-hint-list></app-hint-list>
-        </div>
-        <div class="game-component game-answers">
-            <app-answers-list></app-answers-list>
-        </div>
+
+   <div class="back-container">
+    <button class="btn-back" routerLink="/menu">← Back to Menu</button>
+  </div>
+
+  <div class="game-section">
+    <h3>Your Hints</h3>
+
+    <div class="section-body">
+      <ul class="hints-list" *ngFor="let hint of askedHints; let i = index">
+        <li>{{ i + 1 }}. {{ hint }}</li>
+      </ul>
     </div>
-    
-    <p class="answer-text">{{this.answerGiven}}</p>
+
+    <button class="btn-action" (click)="onNewHint()">Give me a hint</button>
+  </div>
+
+  <div class="game-section">
+    <h3>Your Guesses</h3>
+
+    <div class="section-body">
+      <ul class="guesses-list" *ngFor="let answer of wrongAnswersList">
+        <li>{{ answer.text }}</li>
+      </ul>
+    </div>
+    <input
+      placeholder="Your guess here"
+      class="guess-input"
+      [(ngModel)]="answerInput"
+      (keydown.enter)="onAnswerGiven()"
+    />
+
+    <button class="btn-action" (click)="onAnswerGiven()">Send</button>
+  </div>
+</div>
+
+<div class="modal-bg" *ngIf="showEndModal">
+  <div class="modal-box">
+    <p>{{ endMessage }}</p>
+
+    <button class="modal-btn" (click)="startNewGame()">
+      Start a new game
+    </button>
+
+    <button class="modal-btn secondary" routerLink="/menu">
+      Back to Menu
+    </button>
+  </div>
 </div>

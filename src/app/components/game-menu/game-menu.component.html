@@ -3,18 +3,16 @@
         <h2 class="app-title__header">Country Guesser</h2>
         <p class="app-title__subtitle">Can you guess the country with as few hints as possible?</p>
     </div>
-    
-    <!-- Menu Section -->
+
     <div *ngIf="!toggleHelp" class="app-menu">
-        <button class="btn-primary btn-primary-cta" routerLink="/game">New Game</button>
-        <button class="btn-primary" (click)="toggleHelp = !toggleHelp">How to Play</button>
-        <button class="btn-primary">About</button>
+        <button class="btn-menu btn-start" routerLink="/game">🎮 New Game</button>
+        <button class="btn-menu" (click)="toggleHelp = !toggleHelp">❓ How to Play</button>
+        <button class="btn-menu">ℹ️ About</button>
     </div>
-    
-    <!-- Help Section -->
+
     <div *ngIf="toggleHelp" class="app-help">
         <p>Each round, a random country will be chosen, and you must guess it in as few hints as possible.<br> 
            Use the hints on the right side to make your guesses.</p>
-        <button class="btn-primary" (click)="toggleHelp = !toggleHelp">Back to Menu</button>
+        <button class="btn-menu" (click)="toggleHelp = !toggleHelp">⬅ Back to Menu</button>
     </div>
 </div>
