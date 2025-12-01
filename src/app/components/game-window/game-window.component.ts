@@ -56,7 +56,7 @@ export class GameWindowComponent {
 
     if (submitted === this.answer.toLowerCase()) {
      
-      this.triggerEnd('You won! Play again?');
+      this.triggerEnd('You won. Play again?');
     }
     this.wrongAnswersList.push({ text: this.answerInput, isWrong: true });
     this.answerInput = '';
