@@ -1,18 +1,44 @@
 <div class="container">
-    <div class="app-title">
-        <h2 class="app-title__header">Country Guesser</h2>
-        <p class="app-title__subtitle">Can you guess the country with as few hints as possible?</p>
-    </div>
+  <div class="app-title">
+    <h2 class="app-title__header">Country Guesser</h2>
+    <p class="app-title__subtitle">
+      Can you guess the country with as few hints as possible?
+    </p>
+  </div>
 
-    <div *ngIf="!toggleHelp" class="app-menu">
-        <button class="btn-menu btn-start" routerLink="/game">🎮 New Game</button>
-        <button class="btn-menu" (click)="toggleHelp = !toggleHelp">❓ How to Play</button>
-        <button class="btn-menu">ℹ️ About</button>
-    </div>
+  <div *ngIf="!toggleHelp && !toggleAbout" class="app-menu">
+    <button class="btn-menu btn-start" routerLink="/game">🎮 New Game</button>
+    <button class="btn-menu" (click)="toggleHelp = !toggleHelp">
+      ❓ How to Play
+    </button>
+    <button class="btn-menu" (click)="toggleAbout = !toggleAbout">
+      ℹ️ About
+    </button>
+  </div>
 
-    <div *ngIf="toggleHelp" class="app-help">
-        <p>Each round, a random country will be chosen, and you must guess it in as few hints as possible.<br> 
-           Use the hints on the right side to make your guesses.</p>
-        <button class="btn-menu" (click)="toggleHelp = !toggleHelp">⬅ Back to Menu</button>
-    </div>
+  <div *ngIf="toggleHelp" class="app-help">
+    <p>
+      Each round, a random country is selected. Try to guess it using as few
+      hints as possible. The hints are shown on the right side.
+    </p>
+    <button class="btn-menu" (click)="toggleHelp = !toggleHelp">
+      ⬅ Back to Menu
+    </button>
+  </div>
+
+  <div *ngIf="toggleAbout" class="app-help">
+    <p>
+      Project built with Angular by
+      <a
+        href="https://github.com/jpmoraisf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        github.com/jpmoraisf </a
+      >.
+    </p>
+    <button class="btn-menu" (click)="toggleAbout = !toggleAbout">
+      ⬅ Back to Menu
+    </button>
+  </div>
 </div>
