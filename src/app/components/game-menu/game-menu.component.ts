@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class GameMenuComponent {
   public toggleHelp: Boolean = false
+  public toggleAbout: Boolean = false
 }
