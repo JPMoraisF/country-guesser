@@ -99,4 +99,18 @@
         flex-direction: column;
         flex-wrap: unset;
     }
+
+    .container {
+        flex-direction: column;
+        margin: 1px
+    }
+
+    .game-section {
+        height: auto;
+        padding: 2px;
+    }
+
+    .back-container {
+        margin-bottom: 5px;
+    }
 }

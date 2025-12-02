@@ -55,15 +55,15 @@
 }
 
 .btn-start {
-    background: linear-gradient(135deg, #ff5858, #fb8c00);
+    background: linear-gradient(135deg, #ff5858, #fb8c00)!important;
     border: none;
     color: white;
 }
 
-.btn-start:hover {
+/* .btn-start:hover {
     transform: translateY(-2px);
     filter: brightness(1.1);
-}
+} */
 
 .app-menu {
     display: flex;
