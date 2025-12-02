@@ -95,22 +95,24 @@
 }
 
 @media (max-width: 768px) {
-    .game-window {
-        flex-direction: column;
-        flex-wrap: unset;
-    }
-
     .container {
         flex-direction: column;
-        margin: 1px
-    }
-
-    .game-section {
-        height: auto;
-        padding: 2px;
+        margin: 1px;
+        height: 90vh
     }
 
     .back-container {
         margin-bottom: 5px;
     }
+
+    .game-section {
+        height: auto;
+        padding: 2px;
+        margin: 5px
+    }
+
+    .game-section .section-body {
+      max-height: 150px; 
+      overflow-y: auto;
+  }
 }
